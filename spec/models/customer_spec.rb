@@ -6,6 +6,16 @@ RSpec.describe Customer, type: :model do
     expect(customer.full_name).to eq('Sr. Jean Pierry')
   end
   
+  it 'Herança' do
+    customer = build(:customer_vip)
+    expect(customer.vip).to be_truthy
+  end
+  
+  it 'Herança' do
+    customer = build(:customer)
+    expect(customer.vip).to be_falsy
+  end
+  
   it '#full_name' do
     customer = create(:customer)
     expect(customer.full_name).to start_with('Sr. ')
