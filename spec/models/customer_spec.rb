@@ -3,6 +3,9 @@ require 'rails_helper'
 RSpec.describe Customer, type: :model do
   it '#full_name - sobrescrevendo atributo' do
     customer = build(:user, name:  'Jean Pierry') # ou build(:customer)
+    customer2 = build(:user, name:  'Jean Pierry') # ou build(:customer)
+    puts customer.email
+    puts customer2.email
     expect(customer.full_name).to eq('Sr. Jean Pierry')
   end
   
