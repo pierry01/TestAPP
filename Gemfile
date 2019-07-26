@@ -22,6 +22,7 @@ group :development, :test do
   gem 'httparty'
   gem 'webmock'
   gem 'vcr'
+  gem 'shoulda-matchers'
 end
 
 group :development do
