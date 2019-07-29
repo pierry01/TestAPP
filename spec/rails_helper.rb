@@ -40,6 +40,9 @@ Shoulda::Matchers.configure do |config|
 end
   
 RSpec.configure do |config|
+  # Devise
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  
   # Time Helper
   config.include ActiveSupport::Testing::TimeHelpers
   
