@@ -71,8 +71,8 @@ RSpec.describe CustomersController, type: :controller do
       end
     end
 
-    # Routes
-    it { should route(:get, '/customers').to(action: :index) }
-
+    context 'routes' do
+      it { should route(:get, '/customers').to(action: :index) }
+    end
   end
 end
