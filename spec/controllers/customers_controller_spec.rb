@@ -43,10 +43,16 @@ RSpec.describe CustomersController, type: :controller do
       it 'with valid attributes' do
         customer_params = attributes_for(:customer)
         sign_in @member
-        
         expect { 
           post :create, params: { customer: customer_params }
         }.to change(Customer, :count).by(1)
+      end
+      
+      it 'content_type JSON' do
+        customer_params = attributes_for(:customer)
+        sign_in @member
+        post :create, format: :json, params: { customer: customer_params }
+        expect(response.content_type).to eq('application/json')
       end
       
       it 'flash notice successfully' do
