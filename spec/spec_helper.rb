@@ -1,3 +1,6 @@
+# JSON Schema
+require 'json_matchers/rspec'
+
 # Webmock gem
 require 'webmock/rspec'
 

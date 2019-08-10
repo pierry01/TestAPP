@@ -10,13 +10,13 @@ RSpec.describe CustomersController, type: :controller do
       end
     end
     
-    context '#show' do
-      it '302 (not authorized)' do
-        customer = create(:customer)
-        get :show, params: { id: customer.id }
-        expect(response).to have_http_status(302)
-      end
-    end
+    # context '#show' do
+    #   it '302 (not authorized)' do
+    #     customer = create(:customer)
+    #     get :show, params: { id: customer.id }
+    #     expect(response).to have_http_status(302)
+    #   end
+    # end
   end
   
   describe 'as a logged member' do
